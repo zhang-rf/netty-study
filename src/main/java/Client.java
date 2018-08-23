@@ -34,6 +34,9 @@ class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         return INSTANCE;
     }
 
+    private EchoClientHandler() {
+    }
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         ctx.writeAndFlush(Unpooled.copiedBuffer("666666", CharsetUtil.UTF_8));

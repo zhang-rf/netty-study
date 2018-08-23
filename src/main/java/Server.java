@@ -34,6 +34,9 @@ class EchoServerHandler extends ChannelInboundHandlerAdapter {
         return INSTANCE;
     }
 
+    private EchoServerHandler() {
+    }
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf byteBuf = (ByteBuf) msg;
